@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+		
+		<title>Mobile Friendly Page</title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="main.css" />
+		<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,600,800' type='text/css' media='all'/>
+
+		<!-- JavaScript -->
+		<script type="text/javascript" src="javascript/jQuery.all.js"></script>
+		<script type="text/javascript" src="javascript/dropDown.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//Run code upload Page load
+				enableDropDownForIds('#userInfo, #createAccount');
+			});
+		</script>
+	</head>
+	<body>
+		<div id="titleBar" class="blue-gradiant">Sivalingam Sundararaj Shanthi</div>
+		<img src="siva_pic.jpg" id="profile_pic" alt="Profile Picture"/>
+		<div id="name" class="blue-gradiant">EXPERIENCES AND INTERESTS</div>
+		<div class="experienceDetails">
+			<span class="company">Northern Illinois University</span>
+			<span class="address">Dekalb, Illinois, US</span>
+			<span class="yearSpan">2018-Present</span>
+			<span class="positionTitle">Teaching Assistant</span>
+			<p>Teaching Assistant for CSCI 240 and CSCI 466</p>
+		</div>
+        
+        
+        
+        
+		<hr class="width-75">
+		<div class="experienceDetails">
+        
+        <span class="company">NIU</span><span class="address">DeKalb, Illinois</span>
+			<span class="yearSpan">Fall 2018</span>
+			<span class="positionTitle">Graduate Student</span>
+		  <p>Loving Grad life so far. I would love to be a Mobile Application Developer in the Future.</p>
+		</div>
+        
+        
+        
+		<hr class="width-75">
+		<div class="experienceDetails">
+			<span class="company">ISA</span>
+			<span class="address">NIU, Dekalb, IL</span>
+			<span class="yearSpan">January 2018 - Present</span>
+			<span class="positionTitle">Sports Head</span>
+			<p>Organized several Sports events in the Spring Semester.</p>
+		</div>
+		<div id="footer">
+			Designed by Sivalingam Sundararaj Shanthi (Student of Kai Rush). CSCI 521, Fall 2018 Course.
+	</div>
+	</body>
+</html>

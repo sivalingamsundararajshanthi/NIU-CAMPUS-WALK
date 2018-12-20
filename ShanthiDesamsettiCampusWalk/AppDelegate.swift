@@ -12,11 +12,43 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+//    func applicationDidBecomeActive(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool{
+//        return true
+//    }
 
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        Thread.sleep(forTimeInterval: 3.0)
+        
+        let alertController = UIAlertController (title: "This app can only be used inside NIU campus", message: "", preferredStyle: .alert)
+        
+        let firstAction = UIAlertAction(title: "OKAY", style: .default, handler: nil)
+        alertController.addAction(firstAction)
+        
+        let alertWindow = UIWindow(frame: UIScreen.main.bounds)
+        
+        alertWindow.rootViewController = UIViewController()
+        alertWindow.windowLevel = UIWindow.Level.alert + 1;
+        alertWindow.makeKeyAndVisible()
+        
+        alertWindow.rootViewController?.present(alertController, animated: true, completion: nil)
+
         return true
+    }
+    
+    @objc func okay(){
+        print("done")
+    }
+    
+    func applicationDidBecomeActive(application: UIApplication) {
+        //This method is called when the rootViewController is set and the view.
+        let alert = UIAlertController(title: "This app can only be used at NIU", message: "Continue ?", preferredStyle: .alert)
+        
+        //alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+        
+        self.window?.rootViewController?.present(alert, animated: true, completion: nil)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

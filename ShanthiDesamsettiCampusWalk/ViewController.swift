@@ -6,6 +6,10 @@
 //  Copyright © 2018 Sivalingam Sundararaj Shanthi. All rights reserved.
 //
 
+/*
+ This view controller is not used
+ */
+
 import UIKit
 
 class ViewController: UIViewController {
@@ -19,7 +23,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
